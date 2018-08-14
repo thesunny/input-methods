@@ -5,7 +5,9 @@ body {
 	padding: 2em;
 }
 
-pre, code, kbd {
+pre,
+code,
+kbd {
 	font-family: 'Roboto Mono', monospace;
 }
 
@@ -44,7 +46,6 @@ table caption {
 }
 
 .rte {
-	-webkit-user-modify: read-write-plaintext-only;
 	border: 1px solid lightGray;
 	padding: 0.5em;
 	outline: none;
@@ -55,7 +56,8 @@ table caption {
 	border-color: blue;
 }
 
-.logger {}
+.logger {
+}
 
 .logger__table {
 	width: 100%;
@@ -111,7 +113,7 @@ table caption {
 	color: #999 !important;
 }
 
-.logger__table pre, 
+.logger__table pre,
 .logger__table code,
 .logger__table kbd {
 	margin: 0;

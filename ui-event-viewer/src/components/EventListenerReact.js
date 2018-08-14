@@ -23,7 +23,8 @@ export default class EventListenerReact extends React.Component {
 				onInput={handle_event('onInput')}
 				onSelect={handle_event('onSelect')}
 			>
-				Hello World
+				<p>Hello World</p>
+				<p>Goodbye Space</p>
 			</div>
 		);
 	}
