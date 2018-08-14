@@ -751,7 +751,7 @@ var EventListenerRaw = function EventListenerRaw(container, onevent) {
 };
 
 exports.default = EventListenerRaw;
-},{}],12:[function(require,module,exports) {
+},{}],7:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -809,7 +809,16 @@ var EventListenerReact = function (_React$Component) {
 					onInput: handle_event('onInput'),
 					onSelect: handle_event('onSelect')
 				},
-				"Hello World"
+				_react2.default.createElement(
+					"p",
+					null,
+					"Hello World"
+				),
+				_react2.default.createElement(
+					"p",
+					null,
+					"Goodbye Space"
+				)
 			);
 		}
 	}]);
@@ -6250,5 +6259,5 @@ var render_logs = function render_logs() {
 _reactDom2.default.render(_react2.default.createElement(_EventListenerReact2.default, { onevent: log_event }), document.querySelector('#rte__wrapper--react'));
 
 new _EventListenerRaw2.default(document.querySelector('#rte--raw'), log_event);
-},{"./components/EventLogger":10,"./components/EventListenerRaw":11,"./components/EventListenerReact":12,"./utils/serialize-event":13,"./utils/generate-key":14,"react":21,"react-dom":20,"immutable":22}]},{},[6], null)
-//# sourceMappingURL=/input-methods/src.17f81539.map
+},{"./components/EventLogger":10,"./components/EventListenerRaw":11,"./components/EventListenerReact":7,"./utils/serialize-event":13,"./utils/generate-key":14,"react":21,"react-dom":20,"immutable":22}]},{},[6], null)
+//# sourceMappingURL=/input-methods/src.7ff70d14.map
