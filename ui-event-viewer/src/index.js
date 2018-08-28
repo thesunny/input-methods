@@ -25,7 +25,7 @@ const log_event = (e, callbackName) => {
 	}
 	const range = window.getSelection().getRangeAt(0);
 	const editable = document.querySelector('#rte--raw');
-	const content = getContent(editable, range);
+	const content = getContent(editable, range).join('⏎');
 	const item = Object.assign({ content }, serializeEvent(e, callbackName));
 
 	add_log(item);
