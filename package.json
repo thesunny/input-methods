@@ -20,6 +20,7 @@
 		"start": "parcel ui-event-viewer/src/index.html --out-dir ui-event-viewer/dist --public-url /input-methods",
 		"build": "parcel build --no-minify --out-dir ui-event-viewer/dist ui-event-viewer/src/index.html --public-url /input-methods",
 		"deploy": "yarn build && gh-pages -d ui-event-viewer/dist",
+		"deploy-only": "gh-pages -d ui-event-viewer/dist",
 		"precommit": "pretty-quick --staged"
 	},
 	"prettier": {
@@ -32,5 +33,8 @@
 		"jsxBracketSameLine": false,
 		"arrowParens": "avoid",
 		"printWidth": 100
+	},
+	"dependencies": {
+		"pretty": "^2.0.0"
 	}
 }

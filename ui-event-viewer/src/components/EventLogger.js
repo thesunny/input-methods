@@ -24,16 +24,17 @@ export default class EventLogger extends React.Component {
 				</caption>
 				<thead>
 					<tr>
-						<th colSpan="3">General</th>
+						<th colSpan="2">General</th>
 						<th colSpan="3">KeyboardEvent</th>
 						<th>
 							UIEvent<sup>1</sup>
 						</th>
 						<th colSpan="2">InputEvent</th>
+						<th>Content</th>
 					</tr>
 					<tr>
 						<th>#</th>
-						<th>constructor</th>
+						{/* <th>constructor</th> */}
 						<th>type</th>
 
 						<th>key</th>
@@ -44,6 +45,7 @@ export default class EventLogger extends React.Component {
 
 						<th>inputType</th>
 						<th>data</th>
+						<th>content and selection</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -59,7 +61,7 @@ export default class EventLogger extends React.Component {
 							}
 						>
 							<td>{entry.isNativeCounterpart ? '⮑' : entry.index}</td>
-							<td>{this.renderKind(entry.kind, entry.origin)}</td>
+							{/* <td>{this.renderKind(entry.kind, entry.origin)}</td> */}
 							<td>{this.renderValue(entry.type)}</td>
 
 							<td>{this.renderValue(entry.key)}</td>
@@ -70,6 +72,7 @@ export default class EventLogger extends React.Component {
 
 							<td>{this.renderValue(entry.inputType)}</td>
 							<td>{this.renderValue(entry.data)}</td>
+							<td>{this.renderValue(entry.content)}</td>
 						</tr>
 					))}
 				</tbody>
