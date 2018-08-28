@@ -11358,44 +11358,44 @@ var logs = new _immutable.Stack();
 var STACK_LIMIT = 100;
 
 var add_log = function add_log(item) {
-  console.log('item', item);
-  logs = logs.push(item).slice(0, STACK_LIMIT);
+	console.log('item', item);
+	logs = logs.push(item).slice(0, STACK_LIMIT);
 };
 
 // This method is called every time an event is logged. Added inspection of
 // the DOM to this call.
 var log_event = function log_event(e, callbackName) {
-  if (e.nativeEvent) {
-    add_log((0, _serializeEvent2.default)(e.nativeEvent, null, true));
-  }
-  var range = window.getSelection().getRangeAt(0);
-  var editable = document.querySelector('#rte--raw');
-  var content = (0, _getContent2.default)(editable, range).join('⏎');
-  var item = Object.assign({ content: content }, (0, _serializeEvent2.default)(e, callbackName));
+	if (e.nativeEvent) {
+		add_log((0, _serializeEvent2.default)(e.nativeEvent, null, true));
+	}
+	var range = window.getSelection().getRangeAt(0);
+	var editable = document.querySelector('#rte--raw');
+	var content = (0, _getContent2.default)(editable, range).join('⏎');
+	var item = Object.assign({ content: content }, (0, _serializeEvent2.default)(e, callbackName));
 
-  add_log(item);
-  render_logs();
+	add_log(item);
+	render_logs();
 };
 
 var clear_log = function clear_log() {
-  logs = new _immutable.Stack();
-  (0, _generateKey.resetKey)();
-  render_logs();
+	logs = new _immutable.Stack();
+	(0, _generateKey.resetKey)();
+	render_logs();
 };
 
 var insert_separator = function insert_separator() {
-  add_log({ index: (0, _generateKey.getNextKey)(), kind: 'separator' });
-  render_logs();
+	add_log({ index: (0, _generateKey.getNextKey)(), kind: 'separator' });
+	render_logs();
 };
 
 var logger_el = document.querySelector('.logger');
 
 var render_logs = function render_logs() {
-  _reactDom2.default.render(_react2.default.createElement(_EventLogger2.default, { logs: logs, clearLog: clear_log, insertSeparator: insert_separator }), logger_el);
+	_reactDom2.default.render(_react2.default.createElement(_EventLogger2.default, { logs: logs, clearLog: clear_log, insertSeparator: insert_separator }), logger_el);
 };
 
 _reactDom2.default.render(_react2.default.createElement(_EventListenerReact2.default, { onevent: log_event }), document.querySelector('#rte__wrapper--react'));
 
 new _EventListenerRaw2.default(document.querySelector('#rte--raw'), log_event);
 },{"./components/EventLogger":10,"./components/EventListenerRaw":11,"./components/EventListenerReact":12,"./utils/serialize-event":13,"./utils/generate-key":14,"./utils/getContent":15,"react":18,"react-dom":20,"immutable":19,"pretty":21}]},{},[3], null)
-//# sourceMappingURL=/input-methods/src.f9a045dd.map
+//# sourceMappingURL=/input-methods/src.4a84da7b.map
